@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:sans-sarif;
+}
+body {
+    margin-left:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background: #12263d;
+    transition:0.5s;
+}
+body:has(.box[data-color="clr1"]:hover){
+    background:#111;
+}
+body:has(.box[data-color="clr2"]:hover){
+    background:#54491b;
+}
+body:has(.box[data-color="clr3"]:hover){
+    background:#593a1d;
+}
+body:has(.box[data-color="clr4"]:hover){
+    background:#4d4b49;
+}
+.cont{
+    position: relative;
+    display:flex;
+    justify-content: centre;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.cont .box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 10px;
+    transition:0.5s;
+}
+.cont .box .imgbc{
+    position: absolute;
+    inset:0;
+    border-radius: 12px;
+    border:4px solid rgba(0,0,0,0.2);
+}
+.cont .box .imgbc img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+    transition:0.5s;
+}
+.cont .box:hover .imgbc img{
+    opacity:0.5;
+}
+.cont .box .glass{
+    position: absolute;
+    inset:0;
+    background: linear-gradient(#fff2,transparent);
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 15px 15px rgba(0,0,0,0.25);
+    backdrop-filter:blur(4px);
+    border-radius: 10px;
+    opacity:0;
+    scale:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+    transition:0.5s;
+}
+.cont .box .glass::before{
+    content:'';
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    background:rgba(255,255,255,0.05);
+}
+.cont .box:hover{
+    transform:rotate(-15deg);
+}
+.cont .box:hover .glass{
+    opacity:1;
+    scale:1;
+    transform:rotate(20deg);
+}
+.cont .box .glass h3{
+    font-size:1.25em;
+    color:#fff;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    text-align:center;
+    line-height:0.8em;
+}
+.cont .box .glass h3 span{
+    font-weight:400;
+    font-size:0.5em;
+}
+.cont .box ul{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+.cont .box ul a{
+    color:#fff;
+    font-size:1.25em;
+    scale:0;
+    transition:0.25s;
+    transition-delay:scale calc(0.25 * var(--i));
+}
+.cont .box:hover ul a{
+    scale:1;
+}
+.cont .box ul a:hover{
+    color:#fff8;
+}
