@@ -24,6 +24,40 @@ body:has(.box[data-color="clr3"]:hover){
 body:has(.box[data-color="clr4"]:hover){
     background:#4d4b49;
 }
+header{
+    position: absolute;
+    width:100%;
+    height:140px;
+    background:#22374f;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+}
+header .logo{
+    margin-left:50px;
+    color:white;
+    font-size:70px;
+    font-weight:1000;
+    display:flex;
+    align-items:center;
+    
+}
+header .barbx{
+    padding:50px 30px;
+    height:100%;
+    width:130px;
+    margin-right:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.barbx .bar{
+    position:relative;
+    width:100%;
+    height:5px;
+    background-color:white;
+    border-radius: 10px;
+}
 .cont{
     position: relative;
     display:flex;
