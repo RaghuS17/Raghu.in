@@ -95,6 +95,7 @@ header .barbx{
 }
 .cont .box:hover .imgbc img{
     opacity:0.5;
+    border-radius: 50%;
 }
 .cont .box .glass{
     position: absolute;
@@ -122,6 +123,10 @@ header .barbx{
 }
 .cont .box:hover{
     transform:rotate(-15deg);
+    border-radius: 50%;
+}
+.cont .box:hover .imgbc{
+    border-radius: 50%;
 }
 .cont .box:hover .glass{
     opacity:1;
